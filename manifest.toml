@@ -12,7 +12,7 @@ version = "2.5.3~ynh1"
 maintainers = ["eric_G"]
 
 [upstream]
-license = "free"
+license = "AGPLv3"
 website = "https://formbricks.com/"
 admindoc = "https://formbricks.com/docs/self-hosting/one-click"
 code = "https://github.com/formbricks/formbricks"
