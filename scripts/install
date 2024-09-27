@@ -7,8 +7,10 @@ source /usr/share/yunohost/helpers
 # INITIALIZE AND STORE SETTINGS
 #=================================================
 
-key="bar"
-ynh_app_setting_set --key=foo --value=$foo
+key=$(ynh_string_random --length=32)
+cron_secret=$(ynh_string_random --length=32)
+ynh_app_setting_set --key=key --value=$key
+ynh_app_setting_set --key=_cron --value=$_cron
 
 #=================================================
 # INSTALL DEPENDENCIES
@@ -43,7 +45,8 @@ ynh_script_progression "Installing the app..."
 
 pushd $install_dir
     ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
-    ynh_hide_warnings pnpm install   
+    ynh_hide_warnings pnpm install
+    ynh_hide_warnings pnpm build  
 popd
 
 #=================================================

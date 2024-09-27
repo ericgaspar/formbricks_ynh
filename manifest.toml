@@ -14,7 +14,7 @@ maintainers = ["eric_G"]
 [upstream]
 license = "AGPLv3"
 website = "https://formbricks.com/"
-admindoc = "https://formbricks.com/docs/self-hosting/one-click"
+admindoc = "https://formbricks.com/docs/developer-docs/contributing/get-started#local-machine-setup"
 code = "https://github.com/formbricks/formbricks"
 
 [integration]
